@@ -100,45 +100,35 @@ export const SkillData = [
     width: 80,
     height: 80,
   },
-
-
- 
-
-
 ];
 
 export const Socials = [
-  {
-    name: "Discord",
-    src: "/instagram.svg",
-  },
-  {
-    name: "Facebook",
-    src: "/facebook.svg",
-  },
 
   {
     name: "Linkedin",
     src: "/linkedin.svg",
+    link:"https://www.linkedin.com/in/saubhagya-singh-9167b5190/",
+
   },
 
   {
     name: "Github",
     src: "/Github.svg",
+    link:"https://github.com/SaubhagyaSingh",
+
   },
 
   {
     name: "Instagram",
-    src: "/discord.svg",
+    src: "/instagram.svg",
+    link:"https://msng.link/o?saubhagya1296=ig",
+
   },
 
-   {
-    name: "Gmail",
-    src: "/gmail.svg",
-  }, 
   {
     name: "Whatsapp",
     src: "/whatsapp.svg",
+    link:"https://api.whatsapp.com/send?phone=917007084088&text=Hi.%20I%20wanted%20to%20enquire%20about%20Chess%20Classes%E2%99%9F%EF%B8%8F",
   },
 
 ];

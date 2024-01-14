@@ -1,5 +1,5 @@
 import ProjectCard from '@/Components/ProjectCard'
-import { Projects } from '@/constants'
+import { WebProjects } from '@/constants'
 import React from 'react'
 
 const Page = () => {
@@ -10,7 +10,7 @@ const Page = () => {
     
     <div
     className='grid grid-cols-2 gap-5 max-w-[90%] max-h-[90%]'>
-      {Projects.map((project,index)=>(
+      {WebProjects.map((project,index)=>(
         <ProjectCard
         key={index}
         title={project.title}

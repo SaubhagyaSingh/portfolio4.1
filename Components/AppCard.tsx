@@ -8,7 +8,7 @@ interface Props{
     text:string;
 }
 
-const ProjectCard = ({image,title,text}:Props) => {
+const AppCard = ({image,title,text}:Props) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
   
@@ -22,7 +22,7 @@ const ProjectCard = ({image,title,text}:Props) => {
     return (
     <div 
     onClick={handleFlip}
-    className="w-[420px] h-[240px] rounded-md cursor-pointer m-4">
+    className="w-[200px] h-[440px] rounded-md cursor-pointer m-4">
       <motion.div
       className='flip-card-inner w-full h-full'
       initial={false}
@@ -30,14 +30,14 @@ const ProjectCard = ({image,title,text}:Props) => {
       transition={{duration:0.6,animationDuration:"normal"}}
       onAnimationComplete={()=>setIsAnimating(false)}
         >
-
+          
             <div 
             style={{backgroundImage:`url(${image})`}}
-            className='w-full group relative h-full flip-card-front bg-contain bg-no-repeat bg-center rounded-lg p-4 border border-blue-400'>
+            className='w-full group relative h-full flip-card-front bg-cover bg-no-repeat bg-center border border-purple-300 rounded-lg'>
                 <div
-                className='absolute inset-0 w-full h-full rounded-md bg-black opacity-0 group-hover:opacity-40'
+                className='absolute w-full h-full rounded-md bg-black opacity-0 group-hover:opacity-40'
                 />
-                <div className='absolute inset-0 w-full h-full text-[20px] pb-10 hidden group-hover:flex items-center z-[20] justify-center'>
+                <div className='absolute  w-full h-full text-[20px] hidden group-hover:flex items-center z-[20] justify-center'>
                     Learn More &gt;
 
                 </div>
@@ -62,4 +62,4 @@ const ProjectCard = ({image,title,text}:Props) => {
   )
 }
 
-export default ProjectCard
+export default AppCard

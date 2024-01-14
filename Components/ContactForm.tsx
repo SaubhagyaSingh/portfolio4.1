@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactForm = () => {
   return (
-    <form>
+    <form className="mt-40">
         <h2 className="text-2xl font-bold mb-5 text-white">
         Contact Me
         </h2>
@@ -36,7 +36,7 @@ const ContactForm = () => {
         </div>
 
         <button className="px-6 mb-5 py-3 text-sm font-bold text-white uppercase transition-all duration-150 ease-linear bg-blue-500 hover:bg-blue-400">
-        </button>
+        Submit</button>
     </form>
   )
 }

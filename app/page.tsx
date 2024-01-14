@@ -7,36 +7,38 @@ export default function Home() {
       <div className="flex items-center w-full h-full bg-cover bg-center"
         style={{ backgroundImage: "url(/main-bg.webp)" }}
       >
-        <div className="  pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-8 z-[10] max-w-[750px]">
+        <div className="  pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-8 z-[10] max-w-[800px]">
           <h1 className="text-[50px] text-white font-semibold">
-            Make Anything Possible with
+            Welcome to the Portfolio of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-             {" "} Web Development
+             {" "} Saubhagya Singh
             </span>
           </h1>
           <p className="text-gray-200 hidden md:block">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
-            minima ad ab molestiae ea perferendis nostrum, dolores animi omnis
-            iste.
+          Hey there! I'm a third-year B.Tech student at MIT-WPU Pune, deeply passionate about software development and bringing ideas to life. I combine creativity with technical skills. Apart from coding, I'm a National-level chess enthusiast.<br></br>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500 text-xl">
+            The Jack of all and master of one. 🚀💻🔧
+            </span>
+         
           </p>
           <div className="flex-col md:flex-row hidden md:flex">
             <Link
               href="/my-skills"
-              className="px-3 py-3 mr-4 group relative rounded-[20px] bg-blue-500 hover:bg-blue-400  text-lg text-white max-w-[200px]"
+              className="px-8 py-3 mr-4 group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-500  text-lg text-white max-w-[200px]"
             >
-              Learn More
+             My Skills
             </Link>
 
             <Link
               href="/my-projects"
-              className=" mr-4 group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]"
+              className=" mr-4 group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-500 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               My Projects
             </Link>
 
             <Link
               href="/contact-me"
-              className=" group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]"
+              className=" group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-500 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               <div className="absolute rounded-[20px] z-[10] bg-white inset-0 opacity-0 group relative-hover:opacity-20" />
               Contact me

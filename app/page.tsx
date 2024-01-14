@@ -7,15 +7,24 @@ export default function Home() {
       <div className="flex items-center w-full h-full bg-cover bg-center"
         style={{ backgroundImage: "url(/main-bg.webp)" }}
       >
-        <div className="  pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-8 z-[10] max-w-[800px]">
+        <div className="md:pl-16 pb-56 flex flex-col gap-8 z-[10] max-w-[800px]">
+        <Image
+            src="/pfp.png"
+            alt="horse"
+            height={265}
+            width={265}
+            className=" right-6 top-12 rounded-full border-4 border-white relative mr-4"
+             />
+        </div>
+        <div className=" relative  pb-56 md:pb-20 flex flex-col gap-8 z-[10] max-w-[800px]">
           <h1 className="text-[50px] text-white font-semibold">
             Welcome to the Portfolio of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
              {" "} Saubhagya Singh
             </span>
           </h1>
-          <p className="text-gray-200 hidden md:block">
-          Hey there! I'm a third-year B.Tech student at MIT-WPU Pune, deeply passionate about software development and bringing ideas to life. I combine creativity with technical skills. Apart from coding, I'm a National-level chess enthusiast.<br></br>
+          <p className="text-gray-200 hidden md:block flex-wrap">
+          Hey there! I'm a third-year B.Tech student at MIT-WPU Pune,deeply passionate about <br></br>software development and bringing ideas to life. I combine creativity with technical skills.<br></br> Apart from coding, I'm a National-level chess player.<br></br><br></br>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500 text-xl">
             The Jack of all and master of one. 🚀💻🔧
             </span>
@@ -84,6 +93,7 @@ export default function Home() {
              width={480}
              height={480}
              />
+           
           </div>
 
           <div className=" absolute bottom-0 z-[5] w-full h-full">

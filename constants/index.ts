@@ -113,7 +113,7 @@ export const Socials = [
 
   {
     name: "Github",
-    src: "/Github.svg",
+    src: "/github.svg",
     link:"https://github.com/SaubhagyaSingh",
 
   },

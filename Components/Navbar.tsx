@@ -12,7 +12,6 @@ const Navbar = () => {
         <h1 className=" absolute text-white text-25px font-semibold left-2">   Saubhagya
        
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-          
           singh65@gmail.com
           </span>
         </h1>

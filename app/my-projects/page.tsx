@@ -1,5 +1,3 @@
-"use client"
-
 
 import ProjectCard from "@/Components/ProjectCard"
 import { WebProjects } from "@/constants"

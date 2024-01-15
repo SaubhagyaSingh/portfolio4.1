@@ -5,7 +5,7 @@ export default function Home() {
     <main className="w-screen h-screen relative">
       
       <div className="flex items-center w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url(/main-bg.webp)" }}
+        style={{ backgroundImage: "url(/main-bg.webp)"}}
       >
         <div className="md:pl-16 pb-56 flex flex-col gap-8 z-[10] max-w-[800px]">
         <Image
@@ -20,7 +20,7 @@ export default function Home() {
           <h1 className="text-[50px] text-white font-semibold">
             Welcome to the Portfolio of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-              {" "}Saubhagya Singh
+            Saubhagya Singh
             </span>
           </h1>
           <p className="text-gray-200 hidden md:block flex-wrap">
@@ -79,7 +79,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className=" absolute bottom-0 right-0 z-[10]">
+          <div className="absolute bottom-0 right-0 z-[10]">
             <Image
             src="/horse.png"
             alt="horse"
@@ -96,7 +96,7 @@ export default function Home() {
            
           </div>
 
-          <div className=" absolute bottom-0 z-[5] w-full h-full">
+          <div className="absolute bottom-0 z-[5] w-full h-full">
           <Image src="/trees.webp" alt="trees" width={2000} height={2000}
           className="w-full h-full"/>
             

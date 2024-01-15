@@ -35,21 +35,21 @@ export default function Home() {
           </p>
           <div className="flex-col md:flex-row hidden md:flex">
             <Link
-              href="/my-skills"
+              href="/My-skills"
               className="px-8 py-3 mr-4 group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-500  text-lg text-white max-w-[200px]"
             >
              My Skills
             </Link>
 
             <Link
-              href="/my-projects"
+              href="/My-projects"
               className=" mr-4 group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-500 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               My Projects
             </Link>
 
             <Link
-              href="/contact-me"
+              href="/Contact-me"
               className=" group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-500 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               <div className="absolute rounded-[20px] z-[10] bg-white inset-0 opacity-0 group relative-hover:opacity-20" />
@@ -61,21 +61,21 @@ export default function Home() {
 
           <div className=" flex absolute bottom-10 z-[20] right-5 flex-col md:hidden ">
             <Link
-              href="/my-skills"
+              href="/My-skills"
               className="group relative rounded-[20px] bg-blue-500 hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               Learn More
             </Link>
 
             <Link
-              href="/my-projects"
+              href="/My-projects"
               className=" group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               My Projects
             </Link>
 
             <Link
-              href="/contact-me"
+              href="/Contact-me"
               className=" group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               contact-me

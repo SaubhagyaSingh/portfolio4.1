@@ -186,19 +186,19 @@ export const NavLinks = [
     link: "/",
   },
   {
-    name: "/my-skills",
+    name: "/My-skills",
     icon: RxLightningBolt,
-    link: "/my-skills",
+    link: "/My-skills",
   },
   {
-    name: "/my-projects",
+    name: "/My-projects",
     icon: RxDashboard,
-    link: "/my-projects",
+    link: "/My-projects",
   },
   {
-    name: "/contact-me",
+    name: "/Contact-me",
     icon: RxMobile,
-    link: "/contact-me",
+    link: "/Contact-me",
   },
   {
     name: "/About-me",

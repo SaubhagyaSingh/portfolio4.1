@@ -1,4 +1,4 @@
-import { RxHome, RxDashboard, RxClipboard,RxLightningBolt,RxMobile,RxPerson } from "react-icons/rx";
+import { RxHome, RxDashboard,RxLightningBolt,RxMobile,RxPerson } from "react-icons/rx";
 
 export const SkillData = [
   {

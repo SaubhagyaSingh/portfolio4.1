@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 const Page = () => {
   return (
-    <>
+
     <div
       style={{ backgroundImage: "url(/mountains.jpg)" }}
       className="w-screen h-screen flex flex-row bg-center bg-cover"
@@ -72,7 +72,6 @@ const Page = () => {
       </div>
      
     </div>
-    </>
   );
 };
 

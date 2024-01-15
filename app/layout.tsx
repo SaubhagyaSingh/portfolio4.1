@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Navbar from '../Components/Navbar'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Navbar from "../Components/Navbar"
 import Navigation from "../Components/Navigation"
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Saubhagya Singh',
-  description: 'Portfolio website',
+  title: "Saubhagya Singh",
+  description: "Portfolio website",
 }
 
 export default function RootLayout({

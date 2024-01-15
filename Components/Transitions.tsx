@@ -1,20 +1,20 @@
 "use client"
-import React from 'react'
-import {motion} from 'framer-motion'
+import React from "react"
+import {motion} from "framer-motion"
 
 const TransitionVariants={
     initial:{
-        y:'100%',
-        height:'100%'
+        y:"100%",
+        height:"100%"
     },
     animate:{
-        y:'0%',
-        height:'0%'
+        y:"0%",
+        height:"0%"
     },
     exit:
     {
-        y:['0%','100%'],
-        height:['0%','100%']
+        y:["0%","100%"],
+        height:["0%","100%"]
     },
 }
 

@@ -1,7 +1,7 @@
 // Components/Navbar.tsx
-import React from 'react';
-import Image from 'next/image';
-import { Socials } from '@/constants';
+import React from "react";
+import Image from "next/image";
+import { Socials } from "@/constants";
 
 const Navbar = () => {
   return (

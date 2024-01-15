@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const ContactForm = () => {
   return (
@@ -9,19 +9,19 @@ const ContactForm = () => {
 
         <div className="mb-3">
             <input
-            type='text'
-            placeholder='Your Name'
-            name='Name'
-            className='w-full px-3 py-2 text-sm text-gray-200 placeholder-gray-400 bg-white border-0 rounded shadow  '
+            type="text"
+            placeholder="Your Name"
+            name="Name"
+            className="w-full px-3 py-2 text-sm text-gray-200 placeholder-gray-400 bg-white border-0 rounded shadow  "
             />
         </div>
 
         <div className="mb-3">
             <input
-            type='email'
-            placeholder='Email'
-            name='email'
-            className='w-full px-3 py-2 text-sm text-gray-200 placeholder-gray-400 bg-white border-0 rounded shadow  '
+            type="email"
+            placeholder="Email"
+            name="email"
+            className="w-full px-3 py-2 text-sm text-gray-200 placeholder-gray-400 bg-white border-0 rounded shadow  "
             />
         </div>
 
@@ -29,9 +29,9 @@ const ContactForm = () => {
 
         <div className="mb-3">
             <input
-            placeholder='Type your Message here'
-            name='Message'
-            className='w-full px-3 py-2 text-sm text-gray-200 placeholder-gray-400 bg-white border-0 rounded shadow  '
+            placeholder="Type your Message here"
+            name="Message"
+            className="w-full px-3 py-2 text-sm text-gray-200 placeholder-gray-400 bg-white border-0 rounded shadow  "
             />
         </div>
 

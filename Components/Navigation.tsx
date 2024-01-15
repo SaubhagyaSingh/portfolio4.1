@@ -1,9 +1,9 @@
 "use client"
-import { NavLinks } from '@/constants'
-import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import { NavLinks } from "@/constants"
+import { usePathname } from "next/navigation"
+import React, { useEffect, useState } from "react"
 import Link from "next/link";
-import Transitions from './Transitions';
+import Transitions from "./Transitions";
 const Navigation = () => {
 const [isRouting,setIsRouting]=useState(false)
 const path= usePathname()
@@ -36,7 +36,7 @@ useEffect(()=>{
         <Link
         href={nav.link}
         key={nav.name}
-        className='mb-16 pl-4 min-w-[20%]'
+        className="mb-16 pl-4 min-w-[20%]"
        >
       <nav.icon className={`w-[24px] h-[24px] ${path===nav.name ? "text-purple-800":"text-white"}`}/>
        

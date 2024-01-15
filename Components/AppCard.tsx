@@ -47,7 +47,7 @@ const AppCard = ({image,title,text}:Props) => {
             style={{backgroundImage:`url(${image})`}}
             className='w-full group relative h-full flip-card-back bg-cover bg-center rounded-lg p-4'>
                 <div
-                className='absolute inset-0 w-full h-full rounded-md bg-black opacity-50 z-[-1]'
+                className='absolute inset-0 w-full h-full rounded-md bg-black opacity-80 z-[-1]'
                 />
                 <div className='flex flex-col gap-20 py-3 z-[30]'>
                     <h1 className='text-white text-2xl font-semibold'>{title}</h1>

@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex-col md:flex-row hidden md:flex">
             <Link
               href="/My-skills"
-              className="px-8 py-3 mr-4 group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-500  text-lg text-white max-w-[200px]"
+              className="px-8 py-3 mr-4 group  rounded-[20px] border border-white bg-transparent hover:bg-blue-500  text-lg text-white max-w-[200px]"
             >
              My Skills
             </Link>

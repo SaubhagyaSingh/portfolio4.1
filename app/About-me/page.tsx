@@ -32,7 +32,7 @@ const Page = () => {
           science. My portfolio is a reflection of my dedication to innovation,
           problem-solving, and my continuous quest to expand my knowledge and
           skills. Join me as I showcase my academic and extracurricular
-          achievements, projects, and the exciting ventures I've undertaken on
+          achievements, projects, and the exciting ventures I have undertaken on
           my path to becoming a well-rounded computer scientist.
         </p>
       </div>

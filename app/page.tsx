@@ -59,7 +59,7 @@ export default function Home() {
           <div className=" flex absolute bottom-10 z-[20] right-5 flex-col md:hidden ">
             <Link
               href="/my-skills"
-              className=" group relative rounded-[20px] bg-blue-500 hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]"
+              className="group relative rounded-[20px] bg-blue-500 hover:bg-blue-400 px-5 py-3 text-lg text-white max-w-[200px]"
             >
               Learn More
             </Link>

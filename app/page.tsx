@@ -23,10 +23,10 @@ export default function Home() {
           <h1 className="text-[50px] text-white font-semibold">
             Welcome to the Portfolio of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-            Saubhagya Singh
+            {" "}Saubhagya Singh
             </span>
           </h1>
-          <p className="text-gray-200 hidden md:block flex-wrap">
+          <p className="text-gray-200 md:block flex-wrap">
           Hey there! I am a third-year B.Tech student at MIT-WPU Pune,deeply passionate about <br></br>software development and bringing ideas to life. I combine creativity with technical skills.<br></br> Apart from coding, I am a National-level chess player.<br></br><br></br>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500 text-xl">
             The Jack of all and master of one. 🚀💻🔧

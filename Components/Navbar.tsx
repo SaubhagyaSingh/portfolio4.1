@@ -5,7 +5,7 @@ import { Socials } from "@/constants";
 
 const Navbar = () => {
   return (
-    <div className="absolute top-0 z-[100] w-full h-100px bg-transparent flex justify-between items-center px-10">
+    <div className="absolute top-0 z-[100] w-full h-100px bg-transparent flex justify-between items-center left-0 px-10">
       <div className="flex flex-row gap-3 items-center">
         <div className="relative">
         </div>
@@ -15,7 +15,7 @@ const Navbar = () => {
           </span>
         </h1>
       </div>
-      <div className="flex flex-row py-2 gap-5 mb-4">
+      <div className="flex flex-row py-2 gap-5 mb-4 right-2">
         {Socials.map((social) => (
           <a key={social.name} href={social.link} target="_blank" rel="noopener noreferrer">
             <Image

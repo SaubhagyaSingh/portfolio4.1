@@ -1,3 +1,6 @@
+"use client"
+
+
 import AppCard from "@/Components/AppCard"
 import { AppProjects } from "@/constants"
 import React from "react"

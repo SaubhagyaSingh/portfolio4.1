@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
   return (
+    /* eslint-disable react/no-unescaped-entities */
+// Your block of code here
+
     <main className="w-screen h-screen relative">
       
       <div className="flex items-center w-full h-full bg-cover bg-center"
@@ -110,5 +113,7 @@ export default function Home() {
           </div>
 
     </main>
+    /* eslint-enable react/no-unescaped-entities */
+
   );
 }

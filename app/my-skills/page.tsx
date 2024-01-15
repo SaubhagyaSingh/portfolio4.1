@@ -10,7 +10,7 @@ import {Autoplay} from "swiper/modules"
 const Page = () => {
   return (
     <div 
-    style={{backgroundImage:"url(/bg-2.jpg"}}
+    style={{backgroundImage:"url(/bg2.jpg"}}
     className="h-screen w-screen items-center justify-center bg-cover bg-center">
       
       <div className=" flex flex-col gap-20 max-w-[100%] text-center items-center">

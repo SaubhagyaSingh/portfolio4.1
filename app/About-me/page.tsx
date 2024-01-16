@@ -1,7 +1,7 @@
 "use client"
 
 
-import AppCard from "@/Components/AppCard";
+import AppCard from "@/components/AppCard";
 import { AppProjects } from "@/constants";
 import Image from "next/image";
 import React from "react";

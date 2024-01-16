@@ -1,8 +1,8 @@
 "use client"
 
 
-import AppCard from "@/components/AppCard";
-import { AppProjects } from "@/constants";
+import AppCard from "@/app/components/AppCard";
+import { AppProjects } from "@/app/constants";
 import Image from "next/image";
 import React from "react";
 const Page = () => {

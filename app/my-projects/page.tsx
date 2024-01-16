@@ -1,6 +1,6 @@
 
-import ProjectCard from "@/app/components/ProjectCard"
-import { WebProjects } from "@/app/constants"
+import ProjectCard from "../components/ProjectCard"
+import { WebProjects } from "../constants/index"
 import React from "react"
 
 const Page = () => {

@@ -1,8 +1,8 @@
 "use client"
 
 
-import AppCard from "@/app/components/AppCard"
-import { AppProjects } from "@/app/constants"
+import AppCard from "../components/AppCard"
+import { AppProjects } from "../constants/index"
 import React from "react"
 
 const Page = () => {

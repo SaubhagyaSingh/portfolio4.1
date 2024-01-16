@@ -1,5 +1,5 @@
 
-import ProjectCard from "../components/ProjectCard"
+import ProjectCard from "../components/projectCard"
 import { WebProjects } from "../constants/index"
 import React from "react"
 

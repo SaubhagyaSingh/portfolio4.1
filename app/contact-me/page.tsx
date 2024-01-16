@@ -1,7 +1,7 @@
 "use client"
 
 
-import AppCard from "../components/AppCard"
+import AppCard from "../components/appCard"
 import { AppProjects } from "../constants/index"
 import React from "react"
 

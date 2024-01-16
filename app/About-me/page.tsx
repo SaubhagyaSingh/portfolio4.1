@@ -10,7 +10,7 @@ const Page = () => {
 
     <div
       style={{ backgroundImage: "url(/mountains.jpg)" }}
-      className="w-screen h-screen flex flex-row bg-center bg-cover"
+      className="z-[1] w-screen h-screen flex flex-row bg-center bg-cover"
     >
          <div className="flex-1 flex items-center justify-center mb-8">
         <Image

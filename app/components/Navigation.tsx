@@ -29,7 +29,7 @@ useEffect(()=>{
 },[isRouting])
 
     return (
-    <div className="absolute z-[100] -bottom-20 w-[50%] md:w-[20%] max-h-[150px] rounded-full flex justify-between items-center border bg-black border-white px-4 py-7" style={{left:"20%"}}>
+    <div className="px-2 py-2 pt-4 mr-4 absolute z-[100] -bottom-5 max-h-[95px] max-w-[240px] md:-bottom-20 w-[100%] md:w-[20%] md:max-h-[150px] rounded-full flex justify-between items-center border bg-black border-white md:px-4 md:py-7" style={{left:"20%"}}>
 
       {isRouting && <Transitions/>}
       {NavLinks.map((nav)=>(

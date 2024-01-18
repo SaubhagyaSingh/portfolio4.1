@@ -23,7 +23,7 @@ const Page = () => {
             </span>
             </h1>
     <div
-    className="grid grid-cols-4 gap-8 max-w-[100%] max-h-[100%]">
+    className="grid grid-cols-2  md:grid-cols-4 gap-8 max-w-[100%] max-h-[100%]">
       {AppProjects.map((project,index)=>(
         <AppCard
         key={index}

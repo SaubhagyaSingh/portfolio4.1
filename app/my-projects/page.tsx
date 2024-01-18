@@ -20,7 +20,7 @@ const Page = () => {
             </span>
             </h1>
     <div
-    className="grid grid-cols-2 gap-5 max-w-[90%] max-h-[90%]">
+    className="grid grid-row md:grid-cols-2 gap-5 max-w-[90%] max-h-[90%]">
       {WebProjects.map((project,index)=>(
         <ProjectCard
         key={index}

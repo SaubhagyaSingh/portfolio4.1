@@ -22,7 +22,7 @@ const AppCard = ({image,title,text}:Props) => {
     return (
     <div 
     onClick={handleFlip}
-    className="w-[200px] h-[440px] rounded-md cursor-pointer m-4">
+    className="h-[200px] w-[100px] md:w-[200px] md:h-[440px] rounded-md cursor-pointer md:m-4">
       <motion.div
       className='flip-card-inner w-full h-full'
       initial={false}
@@ -51,7 +51,7 @@ const AppCard = ({image,title,text}:Props) => {
                 />
                 <div className='flex flex-col gap-20 py-3 z-[30]'>
                     <h1 className='text-white text-2xl font-semibold'>{title}</h1>
-                    <p className='text-gray-200 text-[16px]'>{text}</p>
+                    <p className='invisible md:visible text-gray-200 text-[16px]'>{text}</p>
                 </div>
             </div>
 

@@ -13,7 +13,7 @@ const Page = () => {
     style={{backgroundImage:"url(/bg2.jpg"}}
     className="z-[1] h-screen w-screen items-center justify-center bg-cover bg-center">
       
-      <div className=" flex flex-col gap-20 max-w-[100%] text-center items-center">
+      <div className=" flex flex-col gap-10 md:gap-20 max-w-[100%] text-center items-center">
         <div className="flex flex-col justify-center text-center items-center gap-4 mt-24">
         <h1 className="font-semibold text-white text-[50px]">Skills
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">

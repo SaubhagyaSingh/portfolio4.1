@@ -32,10 +32,10 @@ export default function Home() {
               Jack of all and master of one. 🚀💻🔧
             </span>
           </p>
-          <div className="z-[2] flex-col md:flex-row md:flex">
+          <div className="z-[2] flex-col md:flex-row md:flex mb-4">
             <Link
               href="/my-skills"
-              className=" text-[13px] md:text-[16px] p-2 md:p-0 md:px-8 md:py-3 md:mr-4 group rounded-[20px] border border-white bg-transparent hover:bg-blue-500 text-lg text-white md:max-w-[200px]"
+              className=" text-[10px] md:text-[16px] p-2 md:p-0 md:px-8 md:py-3 md:mr-4 group rounded-[20px] border border-white bg-transparent hover:bg-blue-500 text-lg text-white md:max-w-[200px]"
             >
               My Skills
             </Link>

@@ -24,7 +24,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="z-[1] text-[14px] pl-2 pr-2 md:text-center text-center text-gray-200 md:block flex-wrap">
-            Hey there! I am a third-year B.Tech student at MIT-WPU Pune, deeply passionate about
+            Hey there! I am a Fourth-year B.Tech student at MIT-WPU Pune, deeply passionate about
             <br></br>software development and bringing ideas to life. I combine creativity with technical skills.
             <br></br> Apart from coding, I am a National-level chess player.
             <br></br><br></br>

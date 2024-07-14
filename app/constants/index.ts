@@ -145,9 +145,9 @@ export const WebProjects = [
     src: "/main.png",
   },
   {
-    title: "Modern Nextjs Portfolio",
-    text: "My portfolio website which showcases my Skills,interest and hobbies along with my projects in a dynamic yet smooth way",
-    src: "/WebPortfolio.png",
+    title: "Appointment Assistant",
+    text: "Developed a website to assist university professors in managing appointments with students",
+    src: "/appointment.png",
   },
   {
     title: "NASA STAR Website",
@@ -158,9 +158,9 @@ export const WebProjects = [
 
 export const AppProjects = [
   {
-    title: "Kotlin paint app",
-    text: "In a spirited challenge against my friend Krishnaraj, I created my inaugural app,Paint using Kotlin. This project marked a significant milestone as my first app, developed within a tight timeframe of two hours",
-    src: "/paint.jpg",
+    title: "Appointment Assistant",
+    text: "The Andes app is a Flutter-based laundry ordering application that features user registration with OTP verification, order placement with options for extra fast delivery, and push notifications using OneSignal.",
+    src: "/andes.jpg",
   },
   {
     title: "Notes",

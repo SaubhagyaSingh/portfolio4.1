@@ -8,7 +8,7 @@ const Page = () => {
   return (  
     <div
       style={{ backgroundImage: "url(/mountains.jpg)" }}
-      className="z-[1] w-screen h-screen flex flex-col md:flex-row bg-center bg-cover overflow-x-hidden"
+      className="z-[1] w-screen h-screen flex flex-col md:flex-row bg-center bg-cover overflow-x-hidden "
     >
      
       <div className="md:flex-1 flex flex-col items-center justify-center ">
@@ -28,7 +28,7 @@ const Page = () => {
         </h1>
         <p className="mt-16  text-white w-[90%] text-[16px] md:text-[18px]">
           Hello, I am Saubhagya Singh, a driven and ambitious Computer Science
-          Engineering student in my third year at MIT-WPU College. With a
+          Engineering student in my Fourth year at MIT-WPU College. With a
           relentless passion for technology and a commitment to excellence, I
           have been on a transformative journey in the world of computer
           science. My portfolio is a reflection of my dedication to innovation,

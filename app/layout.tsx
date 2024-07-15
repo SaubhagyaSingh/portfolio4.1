@@ -5,10 +5,12 @@ import Navbar from "./components/Navbar"
 import Navigation from "./components/Navigation"
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Saubhagya Singh",
   description: "Portfolio website",
-}
+  image: "../public/pf.jpg",
+  url: "https://saubhagyasingh.netlify.app/",
+};
 
 export default function RootLayout({
   children,

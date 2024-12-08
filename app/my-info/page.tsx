@@ -52,12 +52,6 @@ const Page = () => {
     Hackerank
   </a>
 
-  <a
-    href="https://www.codechef.com/users/saubhagya65"
-    className="group relative rounded-[20px] border border-white bg-transparent hover:bg-blue-400 px-5 py-3 text-lg md:mb-24 text-white max-w-[200px]"
-  >
-    CodeChef
-  </a>
 
   <a
     href="https://github.com/SaubhagyaSingh"

@@ -206,3 +206,30 @@ export const NavLinks = [
     link: "/my-info",
   },
 ];
+
+export const Experience = [
+  {
+    name: "Andes",
+    imagePath: "/andes-icon.jpg", // Path to the company logo
+    techStack: ["flutter", "Next", "React", "node-js", "MongoDB"], // Technologies used
+    work: [
+      "Developed a mobile application using Flutter for real-time order tracking.",
+      "Implemented a scalable web application with Next.js and React.",
+      "Built RESTful APIs with Node.js, integrating with a MongoDB database.",
+      "Optimized queries to improve database performance, reducing response times by 40%.",
+      "Worked closely with UI/UX designers to deliver a seamless user experience.",
+    ],
+  },
+  {
+    name: "HummingBird Web Solutions",
+    imagePath: "/hbwsl.jpeg",
+    techStack: ["Next", "ts", "Redis", "Tailwind", "node-js", "SQL"], 
+    work: [
+      "Developed and maintained a scalable web application using Next.js and TypeScript.",
+      "Designed and implemented caching strategies with Redis to enhance performance.",
+      "Created responsive and modern UI components using Tailwind CSS.",
+      "Developed backend services with Node.js and optimized database queries for SQL.",
+      "Collaborated with cross-functional teams to deliver projects on time and within budget.",
+    ],
+  },
+];

@@ -21,11 +21,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ company }) => {
 
   return (
     <div
-      className="relative w-full max-w-xl h-[32rem] perspective cursor-pointer group hover:scale-105 transform transition-transform duration-500"
+      className="w-auto h-[32rem] perspective cursor-pointer group hover:scale-105 transform transition-transform duration-500"
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <div
-        className={`absolute inset-0 w-full h-full transition-transform duration-700`}
+        className={` w-[28rem] h-auto transition-transform duration-700`}
         style={{
           transformStyle: "preserve-3d",
           transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -33,7 +33,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ company }) => {
       >
         {/* Card Front */}
         <div
-          className="absolute inset-0 w-full h-full bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-2xl shadow-xl"
+          className="h-auto bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-2xl shadow-xl"
           style={{ backfaceVisibility: "hidden" }}
         >
           <div className="p-10">
@@ -69,7 +69,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ company }) => {
 
         {/* Card Back */}
         <div
-          className="absolute inset-0 w-full h-full bg-gray-800 text-white rounded-2xl shadow-xl"
+          className="absolute inset-0 w-full h-full bg-purple-700 text-white rounded-2xl shadow-xl"
           style={{
             transform: "rotateY(180deg)",
             backfaceVisibility: "hidden",
@@ -77,7 +77,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ company }) => {
         >
           <div className="relative flex items-center justify-center h-full p-8">
             <h3 className="absolute top-8 text-2xl font-bold">Tech Stack</h3>
-            <div className="relative w-full h-full flex justify-center items-center space-x-6">
+            <div className="relative w-full h-full flex justify-center items-center space-x-2">
               {techStack.map((tech, index) => (
                 <div
                   key={index}

@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  overflow: hidden; 
-}
-
 .flip-card-inner {
   transition: transform 0.6s;
   transform-style: preserve-3d;

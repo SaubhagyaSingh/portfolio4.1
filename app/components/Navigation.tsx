@@ -1,50 +1,88 @@
-"use client"
-import { NavLinks } from "@/app/constants"
-import { usePathname } from "next/navigation"
-import React, { useEffect, useState } from "react"
+"use client";
+import { NavLinks } from "@/app/constants";
+import { usePathname, useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Transitions from "./Transitions";
+
 const Navigation = () => {
-const [isRouting,setIsRouting]=useState(false)
-const path= usePathname()
-const [isActive,setIsActive]=useState(path)
-const [prevPath,setPrevPath]=useState("/")
+  const [isRouting, setIsRouting] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [pendingPath, setPendingPath] = useState(null);
+  const path = usePathname();
+  const router = useRouter();
+  const [prevPath, setPrevPath] = useState("/");
 
-useEffect(()=>{
-    if(prevPath!==path){
-        setIsRouting(true)
+  // Handle initial load to skip transition
+  useEffect(() => {
+    if (isInitialLoad) {
+      setIsInitialLoad(false);
     }
-},[path,prevPath])
+  }, [isInitialLoad]);
 
-useEffect(()=>{
-    if (isRouting){
-        setPrevPath(path);
-        const timeout = setTimeout(()=>{
-            setIsRouting(false)
-        },1200)
-    
-        return()=>clearTimeout(timeout)
-    
+  // Handle animation and navigation
+  useEffect(() => {
+    if (isRouting && pendingPath) {
+      const enterTimeout = setTimeout(() => {
+        router.push(pendingPath);
+      }, 400); // Matches Transitions animate duration (0.4s)
+
+      const exitTimeout = setTimeout(() => {
+        setIsRouting(false);
+        setPendingPath(null);
+      }, 700); // Total: 0.4s (enter) + 0.3s (exit)
+
+      return () => {
+        clearTimeout(enterTimeout);
+        clearTimeout(exitTimeout);
+      };
     }
-},[isRouting])
+  }, [isRouting, pendingPath, router]);
 
-    return (
-    <div className="px-1 py-1 pt-4 mr-4 absolute z-[100] -bottom-14 max-h-[95px] max-w-[240px] md:-bottom-20 w-[100%] md:w-[20%] md:max-h-[150px] rounded-full flex justify-between items-center border bg-black border-white md:px-4 md:py-7" style={{left:"20%"}}>
+  // Update prevPath after navigation
+  useEffect(() => {
+    if (prevPath !== path && !isInitialLoad) {
+      setPrevPath(path);
+    }
+  }, [path, prevPath, isInitialLoad]);
 
-      {isRouting && <Transitions/>}
-      {NavLinks.map((nav)=>(
-        <Link
-        href={nav.link}
-        key={nav.name}
-        className="mb-16 pl-4 min-w-[20%]"
-       >
-      <nav.icon className={`w-[24px] h-[24px] ${path===nav.name ? "text-purple-800":"text-white"}`}/>
-       
-        </Link>    
-      )
-      )}
-    </div>
-  )
-}
+  const handleNavClick = (e:any, link:any) => {
+    e.preventDefault();
+    if (link !== path && !isRouting) {
+      setPendingPath(link);
+      setIsRouting(true);
+    }
+  };
 
-export default Navigation
+  return (
+    <nav className="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[400px] mx-auto">
+      {isRouting && <Transitions />}
+      <div className="flex items-center justify-between px-2 py-2 bg-black/90 backdrop-blur-sm rounded-xl shadow-lg border border-purple-900/50 transition-all duration-300 hover:shadow-purple-900/20">
+        <div className="flex items-center justify-around w-full gap-1">
+          {NavLinks.map((nav) => (
+            <Link
+              href={nav.link}
+              key={nav.name}
+              onClick={(e) => handleNavClick(e, nav.link)}
+              className="flex flex-col items-center justify-center p-1.5 rounded-lg hover:bg-purple-900/30 transition-colors duration-200 group"
+            >
+              <nav.icon
+                className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-200 ${
+                  path === nav.link ? "text-purple-400" : "text-gray-300"
+                } group-hover:text-purple-300`}
+              />
+              <span
+                className={`text-[10px] sm:text-xs mt-0.5 transition-colors duration-200 ${
+                  path === nav.link ? "text-purple-400" : "text-gray-300"
+                } group-hover:text-purple-300 hidden sm:block`}
+              >
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;

@@ -1,61 +1,48 @@
-"use client"
-import React from "react"
-import {motion} from "framer-motion"
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
 
-const TransitionVariants={
-    initial:{
-        y:"100%",
-        height:"100%"
+const TransitionVariants = {
+  initial: {
+    scale: 0,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1.5,
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
     },
-    animate:{
-        y:"0%",
-        height:"0%"
+  },
+  exit: {
+    scale: 0,
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeIn",
     },
-    exit:
-    {
-        y:["0%","100%"],
-        height:["0%","100%"]
-    },
-}
-
+  },
+};
 
 const Transitions = () => {
-  return (
-    <div>
+  if (typeof window === "undefined") return null;
 
+  return createPortal(
+    <motion.div
+      className="fixed top-0 left-0 h-screen w-screen z-[1000] bg-gradient-to-br from-purple-600 to-black"
+      style={{
+        clipPath: "circle(100% at 50% 50%)",
+        transformOrigin: "center",
+      }}
+      variants={TransitionVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    />,
+    document.body
+  );
+};
 
-        <motion.div 
-        className="fixed right-0 h-screen w-screen bottom-full z-[30] bg-[#2e2257]"
-        variants={TransitionVariants}
-        initial="initial"
-        exit="exit"
-        animate="animate"
-        transition={{delay:0.2,duration:0.6,ease:"easeInOut"}}
-        />
-
-        <motion.div 
-        className="fixed right-0 h-screen w-screen bottom-full z-[20] bg-[#3b2d71]"
-        variants={TransitionVariants}
-        initial="initial"
-        exit="exit"
-        animate="animate"
-        transition={{delay:0.4,duration:0.6,ease:"easeInOut"}}
-        />
-
-        <motion.div 
-        className="fixed right-0 h-screen w-screen bottom-full z-[10] bg-[#4b3792]"
-        variants={TransitionVariants}
-        initial="initial"
-        exit="exit"
-        animate="animate"
-        transition={{delay:0.6,duration:0.6,ease:"easeInOut"}}
-        />
-
-
-
-    </div>
-
-  )
-}
-
-export default Transitions
+export default Transitions;

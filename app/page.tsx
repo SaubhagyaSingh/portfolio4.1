@@ -9,7 +9,7 @@ export default function Home() {
         {/* Profile Section */}
         <div className="flex flex-col items-center md:items-start md:mr-12 mb-8 md:mb-0">
           <Image
-            src="/pfp.png"
+            src="/pfp.webp"
             alt="Profile Picture"
             height={250}
             width={250}

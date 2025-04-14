@@ -6,7 +6,7 @@ import React from "react";
 const Page = () => {
   return (
     <div
-      style={{ backgroundImage: "url(/mountains.jpg)" }}
+      style={{ backgroundImage: "url(/mountains.webp)" }}
       className="w-screen min-h-screen bg-center bg-cover flex flex-col items-center justify-center p-4 sm:p-6 md:p-8"
     >
       {/* Profile Image */}

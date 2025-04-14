@@ -147,12 +147,12 @@ export const WebProjects = [
   {
     title: "Appointment Assistant",
     text: "Developed a website to assist university professors in managing appointments with students",
-    src: "/appointment.png",
+    src: "/appointment.webp",
   },
   {
     title: "NASA STAR Website",
     text: "Tech Stack: ReactJS, MongoDB, ML Models. Its core functionality involves scanning official NASA documents, providing astronauts and users with accurate and relevant search results.",
-    src: "/nasamain.png",
+    src: "/nasamain.webp",
   },
 ];
 

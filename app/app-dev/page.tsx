@@ -6,7 +6,7 @@ import React from "react";
 const Page = () => {
   return (
     <div
-      style={{ backgroundImage: "url(/mountains.jpg)" }}
+      style={{ backgroundImage: "url(/mountains.webp)" }}
       className="z-[1] w-screen h-screen flex flex-col items-center justify-center bg-center bg-cover px-4"
     >
       {/* Title Section */}

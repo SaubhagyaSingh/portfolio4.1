@@ -1,6 +1,5 @@
 "use client";
-import React, { useState } from "react";
-import "@/app/globals.css";
+import React from "react";
 import Image from "next/image";
 
 interface Company {
@@ -15,84 +14,82 @@ interface ExperienceCardProps {
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ company }) => {
-  const { name, imagePath, techStack, work } = company;
+  const [isFlipped, setIsFlipped] = React.useState(false);
 
-  const [isFlipped, setIsFlipped] = useState(false);
+  const handleFlip = () => setIsFlipped((prev) => !prev);
 
   return (
     <div
-      className="w-auto h-[32rem] perspective cursor-pointer group hover:scale-105 transform transition-transform duration-500"
-      onClick={() => setIsFlipped(!isFlipped)}
+      className="w-[320px] h-[450px] perspective-[1000px] cursor-pointer"
+      onClick={handleFlip}
     >
       <div
-        className={` w-[28rem] h-auto transition-transform duration-700`}
+        className="relative w-full h-full transition-transform duration-700 ease-in-out"
         style={{
           transformStyle: "preserve-3d",
           transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
       >
-        {/* Card Front */}
+        {/* Front Side */}
         <div
-          className="h-auto bg-gradient-to-br from-white via-gray-100 to-gray-200 rounded-2xl shadow-xl"
+          className="absolute w-full h-full bg-black/80 text-white rounded-xl p-5 backface-hidden"
           style={{ backfaceVisibility: "hidden" }}
         >
-          <div className="p-10">
-            {/* Logo and Company Name */}
-            <div className="flex items-center mb-6">
-              <div className="relative w-24 h-24 overflow-hidden rounded-full border-2 border-gray-300 shadow-md">
-                <Image
-                  src={imagePath}
-                  alt={`${name} logo`}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <h2 className="ml-6 text-3xl font-bold text-gray-800">{name}</h2>
+          <div className="flex items-center mb-4">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-purple-500">
+              <Image
+                src={company.imagePath}
+                alt={company.name}
+                fill
+                className="object-cover"
+                placeholder="blur"
+                blurDataURL="/placeholder.png"
+              />
             </div>
-
-            {/* Work Details */}
-            <div>
-              <h3 className="text-lg font-semibold text-indigo-500">
-                Key Contributions
-              </h3>
-              <ul className="mt-4 text-sm text-gray-700 list-inside space-y-3">
-                {work.map((task, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <span className="mt-1 text-indigo-500">•</span>
-                    <span>{task}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <h2 className="ml-4 text-xl font-bold text-purple-300">{company.name}</h2>
           </div>
+          <h3 className="text-purple-400 font-semibold mb-2">Key Contributions</h3>
+          <ul className="text-sm text-gray-300 space-y-2 overflow-hidden">
+            {company.work.length > 0 ? (
+              company.work.map((item, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-purple-400">•</span>
+                  {item}
+                </li>
+              ))
+            ) : (
+              <li>No contributions listed</li>
+            )}
+          </ul>
         </div>
 
-        {/* Card Back */}
+        {/* Back Side */}
         <div
-          className="absolute inset-0 w-full h-full bg-purple-700 text-white rounded-2xl shadow-xl"
-          style={{
-            transform: "rotateY(180deg)",
-            backfaceVisibility: "hidden",
-          }}
+          className="absolute w-full h-full bg-gradient-to-br from-purple-900 to-black text-white rounded-xl p-5 rotate-y-180 backface-hidden"
+          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
         >
-          <div className="relative flex items-center justify-center h-full p-8">
-            <h3 className="absolute top-8 text-2xl font-bold">Tech Stack</h3>
-            <div className="relative w-full h-full flex justify-center items-center space-x-2">
-              {techStack.map((tech, index) => (
+          <h3 className="text-center text-purple-300 font-semibold mb-4">Tech Stack</h3>
+          <div className="flex flex-wrap justify-center gap-3 overflow-hidden">
+            {company.techStack.length > 0 ? (
+              company.techStack.map((tech, idx) => (
                 <div
-                  key={index}
-                  className="relative w-16 h-16 p-3 bg-gray-700 rounded-full shadow-md hover:bg-gray-600 transition-transform transform scale-100 hover:scale-125"
+                  key={idx}
+                  className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center overflow-hidden"
+                  title={tech}
                 >
                   <Image
-                    src={`/${tech.toLowerCase()}.png`} // Ensure these images exist in `/public/tech/`
+                    src={`/tech/${tech.toLowerCase()}.png`}
                     alt={tech}
-                    layout="fill"
-                    objectFit="contain"
-                    className="rounded-full"
+                    fill
+                    className="object-contain"
+                    placeholder="blur"
+                    blurDataURL="/placeholder.png"
                   />
                 </div>
-              ))}
-            </div>
+              ))
+            ) : (
+              <p className="text-gray-500 text-sm">No tech listed</p>
+            )}
           </div>
         </div>
       </div>

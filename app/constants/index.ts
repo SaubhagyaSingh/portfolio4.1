@@ -196,9 +196,9 @@ export const NavLinks = [
     link: "/my-projects",
   },
   {
-    name: "/contact-me",
+    name: "/app-dev",
     icon: RxMobile,
-    link: "/contact-me",
+    link: "/app-dev",
   },
   {
     name: "/my-info",

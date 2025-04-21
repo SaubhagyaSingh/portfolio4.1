@@ -12,7 +12,7 @@ const Page = () => {
       {/* Profile Image */}
       <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mb-4 sm:mb-6">
         <Image
-          src="/me1.jpg"
+          src="/me1.webp"
           alt="Saubhagya Singh"
           fill
           className="rounded-full border-4 border-white object-cover"

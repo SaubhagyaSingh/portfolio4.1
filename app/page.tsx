@@ -86,7 +86,8 @@ export default function Home() {
       </div>
 
       <div className="absolute top-10 left-0 z-[5] hidden md:block">
-        <Image src="/stars.png" alt="Stars" height={300} width={300} />
+        <Image src="/stars.png" alt="Stars" height={300} width={300}   unoptimized
+ />
       </div>
     </main>
   );

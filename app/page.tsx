@@ -3,7 +3,17 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-screen h-screen relative bg-cover bg-center" style={{ backgroundImage: "url(/main-bg.webp)" }}>
+    <main className="w-screen h-screen relative overflow-hidden">
+      {/* Optimized Background */}
+      <Image
+        src="/main-bg.webp"
+        alt="Main Background"
+        fill
+        priority
+        quality={75}
+        className="object-cover object-center z-0"
+      />
+
       {/* Main Content */}
       <div className="flex flex-col md:flex-row items-center justify-center w-full h-full relative z-10 px-4 md:px-16">
         {/* Profile Section */}
@@ -11,9 +21,10 @@ export default function Home() {
           <Image
             src="/pfp.webp"
             alt="Profile Picture"
-            height={250}
-            width={250}
+            height={300}
+            width={300}
             className="h-[200px] w-[200px] md:h-[300px] md:w-[300px] rounded-full border-4 border-white"
+            priority
           />
         </div>
 
@@ -38,10 +49,12 @@ export default function Home() {
 
           {/* Links Section */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
-            {[{ href: "/my-skills", label: "Skills" },
+            {[
+              { href: "/my-skills", label: "Skills" },
               { href: "/my-projects", label: "Projects" },
               { href: "/experience", label: "Experience" },
-              { href: "/app-dev", label: "App Dev" }].map((link) => (
+              { href: "/app-dev", label: "App Dev" },
+            ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -53,7 +66,7 @@ export default function Home() {
 
             {/* Download Resume Button */}
             <a
-              href="/resume.pdf"  // Link to the resume file
+              href="/resume.pdf"
               download
               className="text-sm md:text-base px-6 py-2 border border-white rounded-full text-white hover:bg-purple-800 transition mt-4 md:mt-0"
             >
@@ -63,6 +76,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 right-0 z-0">
         <Image src="/trees.webp" alt="Trees Background" width={2000} height={2000} className="w-full h-auto" />
       </div>
@@ -71,7 +85,6 @@ export default function Home() {
         <Image src="/cliff.webp" alt="Cliff" width={280} height={480} />
       </div>
 
-      {/* Stars */}
       <div className="absolute top-10 left-0 z-[5] hidden md:block">
         <Image src="/stars.png" alt="Stars" height={300} width={300} />
       </div>
